@@ -1,14 +1,13 @@
 
-function Word(letter) {
-  this.word = [];
-  this.indexes = [];
-  this.check = function() {
-    for(var i = 0; i < this.word.length; i++) {
-      if(this.word.indexOf(letter) != -1) {
-        this.indexes.push(i);
-      }
-    }
-  }
+var words = ['pumpkin', 'ghost', 'autumn'];
+var limit = words.length;
+var word;
+
+function randomWord() {
+  var index = Math.floor(Math.random()*limit);
+  word = words[index];
 }
 
-module.exports = Word;
+randomWord();
+
+module.exports = word;
