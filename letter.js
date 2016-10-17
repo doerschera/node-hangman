@@ -13,8 +13,9 @@ function Letter(word, letter, indexes) {
     console.log(this.blanks.join(' '));
   }
   this.isWin = function() {
-    console.log(this.blanks.join());
-    if(this.blanks.join() == word) {
+    // console.log(word);
+    // console.log(this.blanks.join(''));
+    if(this.blanks.join('') == word) {
       this.win = true;
       console.log('\n---------------');
       console.log('Yay! You win!');

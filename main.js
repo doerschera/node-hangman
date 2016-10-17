@@ -30,7 +30,8 @@ function play() {
     letterCheck.blanks = currentState;
     letterCheck.getLetters();
     currentState = letterCheck.blanks;
-    console.log(currentState);
+
+    letterCheck.isWin();
 
     if(letterCheck.win == false) {
       play();
