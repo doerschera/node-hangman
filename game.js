@@ -1,3 +1,11 @@
-var letter = require('./letter.js');
-var word = require('./word.js');
-var inquirer = require('inquirer');
+
+var words = ['pumpkin', 'ghost', 'autumn'];
+var limit = words.length;
+var word;
+
+function randomWord() {
+  var index = Math.floor(Math.random()*limit);
+  word = words[index];
+}
+
+module.exports = word;
