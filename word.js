@@ -1,13 +1,18 @@
 
-var words = ['pumpkin', 'ghost', 'autumn'];
-var limit = words.length;
-var word;
-
-function randomWord() {
-  var index = Math.floor(Math.random()*limit);
-  word = words[index];
+module.exports = {
+  easy: {
+    words: ['ghost', 'thread', 'weird', 'swear'],
+    guesses: 3
+  },
+  medium: {
+    words: ['pallid', 'pumpkin', 'autumn', 'measure'],
+    guesses: 5
+  },
+  hard: {
+    words: ['indefagitable', 'ecstatic', 'harbinger', 'antideluvian'],
+    guesses: 7
+  },
+  randomWord: function(limit) {
+    return Math.floor(Math.random()*limit);
+  }
 }
-
-randomWord();
-
-module.exports = word;

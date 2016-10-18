@@ -1,6 +1,6 @@
 
 function Letter(word, letter, indexes) {
-  this.win = false;
+  this.winLose = false;
   this.blanks = [];
   this.getLetters = function() {
     for(var i = 0; i < indexes.length; i++) {
@@ -13,10 +13,8 @@ function Letter(word, letter, indexes) {
     console.log(this.blanks.join(' '));
   }
   this.isWin = function() {
-    // console.log(word);
-    // console.log(this.blanks.join(''));
     if(this.blanks.join('') == word) {
-      this.win = true;
+      this.winLose = true;
       console.log('\n---------------');
       console.log('Yay! You win!');
       console.log('---------------\n');
